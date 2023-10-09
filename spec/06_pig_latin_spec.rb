@@ -50,4 +50,13 @@ describe "#translate" do
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
 
+  it "capitalized word is still capitalized" do
+    s = translate("the quick Brown fox")
+    expect(s).to eq("ethay ickquay ownBray oxfay")
+  end
+  it "Multiple capitalized letters are still capitalized" do
+    s = translate("the qUICk Brown fox")
+    expect(s).to eq("ethay ICkqUay ownBray oxfay")
+  end
+
 end
