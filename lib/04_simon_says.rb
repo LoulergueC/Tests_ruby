@@ -11,7 +11,7 @@ def repeat str, times = 2
 end
 
 def start_of_word str, length
-    str[0..length - 1]
+    str[0, length]
 end
 
 def first_word str 
